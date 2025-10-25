@@ -19,9 +19,8 @@ if __name__ == "__main__":
     processed_dir = os.path.join(project_root, "data", "processed")
     dataset_name = "movielens1m"
 
-    # اگر دیتاست واقعی موجود نیست، یک دیتاست کوچک فرضی بسازیم
     if not os.path.exists(raw_dir):
-        print("Raw dataset not found. Creating a small dummy dataset for testing...")
+        print("Raw dataset not found.")
 
     print("raw_dir:", raw_dir)
     print("processed_dir:", processed_dir)
