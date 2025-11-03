@@ -78,7 +78,7 @@ def process_and_save(dataset_name, raw_dir, processed_dir):
         raise NotImplementedError(f"Dataset {dataset_name} not implemented yet")
 
     data = build_graph(users_df, movies_df, ratings_df)
-
+    print(f" dataset saved  {data}")
     os.makedirs(processed_dir, exist_ok=True)
     save_path = os.path.join(processed_dir, f"{dataset_name}.pt")
     torch.save(data, save_path)
